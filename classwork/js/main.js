@@ -46,7 +46,7 @@ function render(){
 	for(var i = 0; i < all.length; i ++){
 		sum += all[i].price;
 		document.querySelector("#product-list").innerHTML += 
-			`<li class="list-group-item d-flex justify-content-between"><h5>$  ${all[i].price}</h5> <a href="#" onClick="closeItem(${i});">X</a></li>`;	
+			`<li class="list-group-item d-flex justify-content-between align-items-center"><h5>$  ${all[i].price}</h5> <a href="#" onClick="closeItem(${i});">X</a></li>`;	
 	}
 	
 	var t = sum;
@@ -55,5 +55,35 @@ function render(){
 		</div>`;
 }
 
+function downloadAll(){
+	var content = "price\n";
+
+	for (var i = 0;i < all.length; i++) {
+		content += all[i].price + "\n";
+	}
+
+	content += "\n";
+
+	download(content, "chto-to-tam.csv", 'text/csv');
+}
+
+
+function download(data, filename, type) {
+    var file = new Blob([data], {type: type});
+    if (window.navigator.msSaveOrOpenBlob) 
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else {
+        var a = document.createElement("a"),
+                url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);  
+        }, 0); 
+    }
+}
 
 //https://github.com/AzizbekMuminov/new-site.git

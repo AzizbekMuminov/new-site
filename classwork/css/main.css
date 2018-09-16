@@ -12,6 +12,7 @@ a{
 .button{
 	font-size: 16px!important;
 	transition: 0.3s;
+	margin: 10px;
 	font-weight: 500;
 }
 
