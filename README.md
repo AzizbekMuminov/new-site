@@ -1,1 +1,9 @@
-# new-site
+#new-site
+NEW SITE!!! THIS IS AMAZING SITE THAT WILL SOLVE ALL OF YOUR PROBLEMS JUST IN A SECOND!!! AND IT ONLY WILL COST YOU  999 999.99$ PER DAY!!! 
+
+
+*AMAZING
+*COOL
+*MOST USEFULL IN THE WORLD
+*COSTS ONLY A MILLION DOLLARS
+*https://azizbekmuminov.github.io/new-site/classwork/index.html#
